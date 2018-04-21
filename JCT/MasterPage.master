@@ -1,0 +1,110 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Jivdaya Charitable Trust</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/gallery_style.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" type="text/javascript">
+    function clearText(field) {
+        if (field.defaultValue == field.value) field.value = '';
+        else if (field.value == '') field.value = field.defaultValue;
+    }
+</script>
+
+ 
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" />    
+    
+<!-- Arquivos utilizados pelo jQuery lightBox plugin -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+<!-- / fim dos arquivos utilizados pelo jQuery lightBox plugin -->
+
+<!-- Ativando o jQuery lightBox plugin -->
+<script type="text/javascript">
+    $(function () {
+        $('#gallery a').lightBox();
+    });
+</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <div class="main_warraper">
+	<!-- start header-->
+	<div>
+		<div class="top_head">
+			<div class="logo">
+                <asp:Image ID="Image1" runat="server" Height="75px" 
+                    ImageUrl="~/images/logo.png" Width="261px" />
+            </div>
+			
+			<div class="contact_box">
+				<div class="contact_text" style="padding-top:4px;">Mobile: +91 9924418184</div>
+				
+				<div class="contact_text" style="color: #000000">Email: jivdaya@jivdayatrust.org</div>
+				
+				<div class="clr"></div>
+			</div>
+			
+			<div class="clr"></div>
+		</div>
+		
+		<div class="navigation">
+			<ul>
+			  <li><a href="Home.aspx">Home</a></li>
+			  <li><a href="About_us.aspx">About Us</a></li>
+			  <li><a href="Gallery.aspx">Gallery</a></li>
+			  <li><a href="Mission.aspx">Presentation</a></li>
+			  <li><a href="NewsAndEvents.aspx">News & Events</a></li>
+			  <li><a href="Contact_Us.aspx">Contact US</a></li>
+			</ul>
+
+		</div>
+		
+		
+	</div>
+	<!-- end header -->
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+    <!-- start footer-->
+	<div class="footer">
+		<div class="footer_menu">
+			<ul>
+			  <li><a href="Home.aspx">Home</a></li>
+			  <li><a href="About_us.aspx">About Us</a></li>
+			  <li><a href="Gallery.aspx">Gallery</a></li>
+			  <li><a href="Mission.aspx">Presentation</a></li>
+			  <li><a href="Contact_Us.aspx">Contact Us</a></li>
+			  <li><a href="NewsAndEvents.aspx">News & Events</a></li>
+			</ul>
+		</div>
+		
+		<div class="footer_r">
+			<div class="copy">Copyright © 2014 Jivdaya Charitable Trust All Rights. Reserved.</div>
+			
+			<div class="copyright">All Copyright Reserved By JCT.</div>
+			
+			<div class="clr"></div>
+		</div>
+		
+		<div class="clr"></div>
+	</div>
+	<!-- end footer -->
+	
+	<div class="clr"></div>
+</div>
+</div>
+    </form>
+</body>
+</html>
